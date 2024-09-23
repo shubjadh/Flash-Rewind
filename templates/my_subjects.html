@@ -1,0 +1,80 @@
+
+
+{% extends 'base.html' %}
+{% set active = "Home" %}
+
+{% block header %}
+<script src="/static/script/SubjectViewer.js"></script>
+{% endblock %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1 class ="yellow-text">My Subjects</h1>
+
+<p class="gray-text">
+    Use this space to create subjects for your notes while learning.
+</p>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    New subject
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create new subject</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="/api/user/subjects" class="pt-3">
+            
+                <div class="form-group row">
+                    <label> Subject</label>
+                    <input type="text" name="subject" class="form-control">
+                </div>
+                <div class="form-group row">
+                    <label> Description</label>
+                    <input type="text" name="description" class="form-control">
+                </div>
+                <div class="row">
+                        <button class="btn btn-primary btn-block">Create</button>
+                        
+                    </div>
+                </div>
+    
+            </form>   
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<div id="cards" class="container">
+</div>
+
+
+
+<script>
+
+    $(() => {
+        const subjectViewer = new SubjectViewer(true, 3, 3);
+        subjectViewer.load();
+    });
+
+</script>
+
+
+
+
+
+{% endblock %}

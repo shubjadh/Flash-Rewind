@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% set active = "FlashCards" %}
+
+{% block title %}
+FlashCards
+{% endblock %}
+
+{% block content %}
+<h1>{{subject.subjectName}}</h1>
+<h4>{{subject.description}}</h4>
+
+
+<div class="flashcard">
+    <div class="flashcard__content">
+      <div class="flashcard__term">question</div>
+      <div class="flashcard__definition">answer</div>
+    </div>
+    <div class="flashcard__buttons">
+      <button class="flashcard__button" id="flip-card">Flip Card</button>
+      <button class="flashcard__button" id="next-card">Next Card</button>
+    </div>
+  </div>
+
+
+<script>
+    const flipButton = document.getElementById("flip-card");
+    const nextButton = document.getElementById("next-card");
+    const termText = document.querySelector(".flashcard__term");
+    const definitionText = document.querySelector(".flashcard__definition");
+    const flashcards = {{ notes | tojson }};
+    console.log(flashcards);
+    let currentIndex = 0;
+    function showCurrentCard() {
+        termText.textContent = flashcards[currentIndex].question;
+        definitionText.textContent = flashcards[currentIndex].answer;
+    }
+
+    function flipCard() {
+        definitionText.classList.toggle("flashcard__definition");
+    }
+
+    function nextCard() {
+        currentIndex = (currentIndex + 1) % flashcards.length;
+        definitionText.classList.add("flashcard__definition--hidden");
+        setTimeout(() => {
+            showCurrentCard();
+            definitionText.classList.remove("flashcard__definition--hidden");
+        }, 500);
+    }
+
+    showCurrentCard();
+    flipButton.addEventListener("click", flipCard);
+    nextButton.addEventListener("click", nextCard);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

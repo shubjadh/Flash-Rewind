@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% set active = "About" %} {% block title %} Related
+Sites {% endblock %} {% block content %}
+
+<h1>{{subject.subjectName}}</h1>
+<h4>{{subject.description}}</h4>
+
+<form action="/subject/{{subject.subjectId}}/createnotes/" method="post">
+  <div class="form-group">
+    <label for="questionInput">Question</label>
+    <input
+      type="text"
+      class="form-control"
+      id="questionInput"
+      aria-describedby="emailHelp"
+      placeholder="Question Text"
+      name="question"
+    />
+  </div>
+  <div class="form-group">
+    <label for="AnswerInput">Answer</label>
+    <input
+      type="text"
+      class="form-control"
+      id="AnswerInput"
+      placeholder="Answer text"
+      name="answer"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add New note</button>
+</form>
+
+{% for note in notes%}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{note.question}}</h5>
+    <p class="card-text">{{note.answer}}</p>
+   
+    <a href="/subject/{{subject.subjectId}}/note/{{note.notetId}}/delete/"
+      class="btn btn-primary"
+      >delete</a>
+  </div>
+</div>
+{% endfor%} 
+
+{% endblock %}

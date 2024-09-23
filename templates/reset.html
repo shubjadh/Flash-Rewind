@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% set active = "reset" %}
+
+{% block title %}
+ Reset
+{% endblock %}
+{% block content %}
+
+<body>
+<br><br><br><br>
+<section class="container form">
+           
+<div class="form signup">
+    <div class="form-content">
+        <h2>Reset Password</h2>
+        <form action="#">
+            
+            <div class="field input-field">
+                <input type="email" placeholder="email" class="input">
+            </div>
+            <div class="form-link">
+            <span>Enter a new password</span>
+            </div>
+            <div class="field input-field">
+                <input type="password" placeholder="new password" class="password">
+            </div>
+            <div class="field input-field">
+                <input type="password" placeholder="new password" class="password">
+            </div>
+            
+            <div class="field button-field">
+                <button>confirm</button>
+            </div>
+
+
+        </form>        
+    </div>
+</div>
+
+</section>
+<br><br><br><br><br><br><br>
+</body>
+{% endblock %}
+
+

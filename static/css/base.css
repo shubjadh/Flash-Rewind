@@ -1,0 +1,359 @@
+
+
+@font-face {
+    font-family: myFont;
+    src: url(AftikaBold.ttf);
+}
+body {
+    
+    background: black;
+    
+}
+
+
+header {
+    background: #3b3b3b;
+    
+   
+}
+
+h1{
+    font-size: 30px;
+    font-family: myFont;
+    color: #FFFFFF;
+}
+
+
+.btn-primary {
+    background: #3b3b3b;
+    border-color: #3b3b3b;
+}
+
+.btn-primary:hover {
+    background: #3b3b3b;
+    border-color: #3b3b3b;
+}
+
+/*changes the text of header to yellow color*/
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #ffd454;
+    
+}
+
+.content {
+    padding: 2rem 1.5rem;
+    
+}
+
+.jumbotron {
+    
+    background: 0;
+
+}
+
+
+
+.container {
+    max-width: 80%;  
+
+}
+
+.big-banner{
+    background-image: url('/static/img/study.jpg');
+    background-size:cover;
+    margin-top: 1em;
+    
+
+    
+}
+
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: myFont;
+        color: #3b3b3b;
+    }
+
+    
+.containers{
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        background-color:#F8F7FF;
+    }
+    
+.form{
+        
+        max-width: 400px;
+        padding: 30px;
+        width: 100%;
+        border: 10px;
+        border-radius: 6px;
+        background: #FFFFFF 
+       }
+    
+.form.signup{
+        opacity: 1;
+        pointer-events: auto;
+        justify-content: center;
+    }
+    
+    
+.form.login{
+        opacity: 1;
+        pointer-events: auto;
+        
+    }
+    
+h2{
+        font-size: 30px;
+        font-weight:600;
+        color: #232836;
+        text-align: center;
+    }
+    
+
+    
+form .field{
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+.field input,
+.field button{
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 6px;
+    }
+    
+.field button{
+        color: #FFFFFF;
+        background-color: #3b3b3b;
+    }
+    
+.field input{
+        outline: none;
+        padding: 0 15px;
+        border: 1px solid#CACACA;
+    }
+    
+.field input:focus{
+        border-bottom-width: 2px;
+    }
+    
+.form-link{
+        text-align: center;
+        margin-top:  10px;
+    }
+    
+.form-link span,
+.form-link a{
+        font-size: 14px;
+        font-weight: 400;
+        color: #232836;
+    }
+    
+.form a{
+        color:#3b3b3b;
+        text-decoration: none;  
+    }
+    
+.form a:hover{
+        text-decoration: underline;
+    }
+    
+footer{
+    max-width: 100%;
+    justify-content: center;
+    position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#3b3b3b ;
+    height: 100%;
+    width: 100%;
+    font-family: myFont;
+    padding-top:40px;
+    color:#000;
+
+} 
+.footer-content{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #FFFFFF;
+} 
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: #FFFFFF;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    color: #FFFFFF;
+}
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+    color: #FFFFFF;
+}
+.socials a:hover i{
+    color:red;
+}
+
+.footer-bottom{
+    background:#000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+.footer-bottom p{
+    font-size:14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: 1;
+    font-weight: 200;
+    color: #FFFFFF;
+
+}
+
+
+
+.sup{
+    text-align: justify;
+}
+
+.card{
+    margin-top: 5%;
+    background: #dfe1e2;
+   
+}
+
+.gray-text{
+    color: #dfe1e2;
+}
+
+.yellow-text{
+    color: #ffd454;
+}
+
+.modal-body{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+
+}
+
+.modal-title{
+    margin-left: 100px;
+
+
+}
+
+.modalCenter{
+    top: 50% !important;
+    transform:translateY(-50%) !important ;
+}
+
+
+.flashcard {
+    background-color: #dfe1e2;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    padding: 20px;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+  }
+  
+  .flashcard__content {
+    text-align: center;
+  }
+  
+  .flashcard__term {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  .flashcard__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  .flashcard__button {
+    background-color: #3b3b3b;
+    color: #e7e4dd;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .flashcard__button:hover {
+    background-color: #141311;
+  }
+  
+  .flashcard__definition--hidden {
+    font-size: 18px;
+
+  }
+  
+  .flashcard__definition {
+    display: none;
+
+  }
+
+  .support{
+    margin-left: 15px;
+    padding-left: 0px;
+    text-align: center;
+
+  }
+
+  .signup{
+    width: auto;
+    height: 100%;
+  }
